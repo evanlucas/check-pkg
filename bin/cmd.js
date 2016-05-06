@@ -7,7 +7,7 @@ const nopt = require('nopt')
 const chalk = require('chalk')
 const knownOpts = { help: Boolean
                   , version: Boolean
-                  , verbose: Boolean
+                  , quiet: Boolean
                   , 'file-filter': [String]
                   , 'dir-filter': [String]
                   , excludes: [String]
@@ -17,6 +17,7 @@ const shortHand = { h: ['--help']
                   , f: ['--file-filter']
                   , d: ['--dir-filter']
                   , e: ['--excludes']
+                  , q: ['--quiet']
                   }
 const parsed = nopt(knownOpts, shortHand)
 const X = chalk.red('✖')
@@ -61,7 +62,7 @@ function print(mod) {
     fail(1)
     console.log('  %s %s', X, chalk.underline(mod.relativePath))
   } else {
-    if (parsed.verbose)
+    if (!parsed.quiet)
       console.log('  %s %s', CHECK, chalk.underline(mod.relativePath))
   }
 

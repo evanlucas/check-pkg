@@ -8,4 +8,4 @@ check-pkg - Check that required packages are in your package.json
     -f, --file-filter <filter>    set the file filter(s)
     -d, --dir-filter <filter>     set the directory filter(s)
     -e, --excludes <filter>       set the excludes filter(s)
-    --verbose                     use verbose log level
+    -q, --quiet                   only show errors
