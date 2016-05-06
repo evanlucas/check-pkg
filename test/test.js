@@ -6,16 +6,17 @@ const root = path.join(__dirname, '..')
 const Check = require('../')
 
 test('Check', (t) => {
-  t.plan(7)
+  t.plan(8)
   t.throws(() => {
     Check()
   }, /missing required property "root"/)
 
-  t.throws(() => {
-    Check({
-      root: __dirname
-    })
-  }, /Unable to read package.json/)
+  Check({
+    root: __dirname
+  }).once('error', (err) => {
+    t.pass('got error event')
+    t.equal(err.code, 'ENOENT')
+  })
 
   const check = new Check({
     root: root
