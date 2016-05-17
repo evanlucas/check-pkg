@@ -1,6 +1,6 @@
 {
   "name": "check-pkg",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check that required packages are in your package.json",
   "main": "index.js",
   "scripts": {
