@@ -20,18 +20,13 @@ $ npm test
 ## CLI Usage
 
 ```bash
-$ check-pkg --verbose
+$ check-pkg
 ✔ index.js
 ✖ bin/cmd.js
   - missing help
 ✔ lib/index.js
 ✔ lib/read-requires.js
 ✔ test/test.js
-
-# or without verbose
-$ check-pkg
-✖ bin/cmd.js
-  - missing help
 ```
 
 ## Author
