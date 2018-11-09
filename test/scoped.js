@@ -10,3 +10,4 @@ if (require.main === module) {
 require('@helpdotcom/biscuits')
 require('@helpdotcom/biscuits/thing')
 require('@helpdotcom/biscuit/thing')
+require('@helpdotcom/biscuits2')

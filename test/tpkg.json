@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "tap": "~5.7.1"
+  },
+  "peerDependencies": {
+    "@helpdotcom/biscuits2": "1.0.0"
   }
 }
