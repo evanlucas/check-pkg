@@ -8,9 +8,9 @@ const chalk = require('chalk')
 const knownOpts = { help: Boolean
                   , version: Boolean
                   , quiet: Boolean
-                  , 'file-filter': [String]
-                  , 'dir-filter': [String]
-                  , excludes: [String]
+                  , 'file-filter': [String, Array]
+                  , 'dir-filter': [String, Array]
+                  , excludes: [String, Array]
                   }
 const shortHand = { h: ['--help']
                   , v: ['--version']
